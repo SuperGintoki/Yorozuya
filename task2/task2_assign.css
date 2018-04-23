@@ -1,0 +1,250 @@
+/*设置body*/
+body{
+	width:100%;
+	margin:0;
+	padding:0;
+	background:#efefef;
+	text-align:center;
+	font-size:1em;
+}
+
+/*设置头部*/
+header{
+	width:100%;
+	height:100px;
+	line-height:100px;
+	background:#29bde0;
+	color:#fff;
+	font-size:1.7em;
+	position:relative;
+}
+
+/*设置头部左侧的返回箭头*/
+.goback{
+	width:26px; 
+	height:41px;
+    background: url('images/bg1.png') -78px -10px;
+    position:absolute;
+    top:50%;
+    margin-top:-20px;
+    left:30px;
+    cursor:pointer;
+}
+
+/*设置头部右侧的帮助符号*/
+.circle{
+	width:48px; 
+	height:48px;
+    background: url('images/bg1.png') -10px -10px;
+    position:absolute;
+    top:50%;
+    margin-top:-24px;
+    right:30px;
+}
+
+/*设置玩家分配和分配结果部分*/
+.assign, .result{
+	background:#fff;
+	width:95%;
+	color:#000;	
+	display:inline-block;
+}
+
+.assign{
+	height:80px;
+	font-size:1.7em;
+	line-height:80px;
+	margin: 10px 0;
+}
+
+.result{
+	font-size:1.3em;
+	padding:50px 0;
+
+}
+
+/*杀手的头像*/
+.killer{
+	width:30px;
+    height:30px;
+    background: url('images/bg1.png') -10px -78px;
+    display:inline-block;
+    vertical-align:middle;
+}
+
+/*平民的头像*/
+.civilian{
+	width:30px; 
+	height:30px;
+    background: url('images/bg1.png') -124px -10px;
+    display:inline-block;
+    vertical-align:middle;
+}
+
+#killer, #civilian{
+	height:30px;
+	width:30px;
+	background:#fff;
+	display: inline-block;
+	vertical-align:middle;
+	text-align:center;
+	font-size:1.2em
+}
+
+/*平民和杀手分列两侧*/
+.left,.right{
+	width:40%;
+	float:left;
+}
+
+/*分配结果页面*/
+#assign_result{
+	margin:70px 0 10px 0;
+	padding:20px;
+
+}
+
+/*自动生成的分配结果*/
+.assignResult{
+	display:inline-block;
+	margin:5px 50px;
+	width:200px;
+}
+
+/*输入玩家数量部分*/
+.input{
+	width:95%;
+	background:#fff;
+	display:inline-block;
+	padding:50px 0 0 0;
+	margin:5px;
+	font-size:1.2em;
+}
+
+input[type="text"]{
+	display:inline-block;
+	height:25px;
+	width:35px;
+	border:none;
+	background:#eee;
+	color:#fab344;
+	margin:0; 
+	font-size:1.2em;
+	text-align:center;
+
+}
+
+.notice{
+	color:#fab344;
+	font-size:.8em;
+}
+
+
+/*滑动条前面的减号*/
+#reduce{
+	height:34px;
+	width:34px;
+	background:url("images/reduce.png");
+	display:inline-block;
+	vertical-align: middle;
+	margin-top:4px;
+}
+/*滑动条前面的减号*/
+#add{
+	height:34px;
+	width:34px;
+	background:url("images/add.png");
+	display:inline-block;
+	vertical-align: middle;
+	margin-top:4px;
+}
+
+input[type="range"]{
+	-webkit-appearance:none;    /*清除滑动条原有的样式*/
+	-moz-appearance:none;
+	width:65%; 
+	height:5px;                 /*设置滑动条的宽度*/
+	margin:40px 0;
+	border-radius: 5px;
+	background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        color-stop(0.50, #fab344),
+        color-stop(0.50, #ffe6be)
+        );
+}
+
+/*兼容webkit内核的浏览器*/
+input[type="range"]::-webkit-slider-thumb{
+	-webkit-appearance:none;    /*清除滑块的原有样式*/
+	height:30px;
+	width:50px;
+	background:url("images/thumb.png") no-repeat center #fff;  
+	border-radius: 5px;
+	border:1px solid #fab344;
+	margin-top: -3px; /*使滑块超出轨道部分的偏移量相等*/
+}
+
+/*兼容firfox*/
+input[type="range"]::-moz-range-thumb{
+	-moz-appearance:none;    /*清除滑块的原有样式*/
+	height:30px;
+	width:50px;
+	background:url("images/thumb.png") no-repeat center #fff;  
+	border-radius: 5px;
+	border:1px solid #fab344;
+	margin-top: -3px; /*使滑块超出轨道部分的偏移量相等*/
+}
+
+input[type=range]::-moz-range-track{
+	height:5px;                 /*设置滑动条的宽度*/
+	background-color:#ffe6be;
+}
+
+input[type="range"]::-moz-range-progress{
+	background:#fab344;
+	height:6px;
+}
+
+/*清除滑动条获得焦点时出现的蓝色边框*/
+input:focus{
+	outline:none;
+}
+
+input[type="range"]::-ms-fill-lower{
+	background:#fab344;
+}
+input[type="range"]::-ms-fill-upper{
+	background:#ffe6be;
+}
+
+button{
+	height:85px;
+	width:96%;
+	background:#fab344;;
+	color:#fff;
+	font-size:1.8em;
+	line-height:85px;
+	margin:20px 0;
+	outline:none;
+	border:none;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
