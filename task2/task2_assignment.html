@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<meta charset="UTF-8">
+    	<title>任务二：玩家配比</title>
+    	<link rel="stylesheet" type="text/css" href="task2_assign.css">
+    </head>
+    <body>
+    	<header>
+    		<i class="goback"></i>
+    		<span>参数设置</span>
+    		<i class="circle"></i>
+    	</header>
+    	<div class="assign">玩家配比</div>
+    	<div class="result">
+    		<div class="left">
+	    		<i class="killer"></i>
+	    		<span>杀手<input type="text" id="killer">人</span>
+    	    </div>
+    	    <div class="right">
+	    		<i class="civilian"></i>
+	    		<span>平民<input type="text" id="civilian">人</span>
+    	    </div>
+            <div id="assign_result"></div>
+    	</div>
+    	<div class="input">
+    		<span>请输入玩家数量</span>
+    		<input id ="quantity" type="text" />
+    		<span class="notice">玩家数量为4-18</span>
+            <div>
+                <i id="reduce"></i>
+        		<input type="range" max="18" min="4" step="1" name="range" value="11" id="range">
+                <i id="add"></i>
+            </div>
+    	</div>
+    	<button>去发牌</button>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script type="text/javascript" src="task2_assign.js"></script>
+    </body>
+</html>
