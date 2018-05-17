@@ -43,24 +43,29 @@ header{
 }
 
 /*设置玩家分配和分配结果部分*/
-.assign, .result{
+.result{
 	background:#fff;
 	width:95%;
 	color:#000;	
 	display:inline-block;
-}
-
-.assign{
-	height:80px;
-	font-size:1.7em;
-	line-height:80px;
-	margin: 10px 0;
-}
-
-.result{
 	font-size:1.3em;
-	padding:50px 0;
+	margin-top:20px;
+}
 
+/*玩家配比居左*/
+.assign{
+	height:250px;
+	width:110px;
+	border-right:1px solid #bbb;
+	float:left;
+	display:table;
+	background:#fff;
+}
+
+/*玩家配比文字居中*/
+.assign span{
+	display: table-cell;
+	vertical-align: middle;
 }
 
 /*杀手的头像*/
@@ -94,21 +99,66 @@ header{
 /*平民和杀手分列两侧*/
 .left,.right{
 	width:40%;
-	float:left;
+	display:inline-block;
+	padding-top:20px;
 }
 
 /*分配结果页面*/
 #assign_result{
-	margin:70px 0 10px 0;
-	padding:20px;
-
+	height:150px;
+	border-bottom:1px solid #bbb;
+	margin-top:10px;
+	overflow-y:auto;
+}
+#config{
+	font-size:.7em;
+	color:#29bde0;
+	margin-top:10px;
+	cursor: pointer;
+}
+.pen{
+	width:15px; 
+	height:15px;
+    background: url('images/bg1.png') -60px -78px;
+    display:inline-block;   
 }
 
 /*自动生成的分配结果*/
 .assignResult{
 	display:inline-block;
 	margin:5px 50px;
-	width:200px;
+	width:150px;
+}
+/*任务分配前面的带颜色的小方块*/
+.assignResult .blue{
+	background:#29bde0;
+	display:inline-block;
+	width:15px;
+	height:15px;
+	margin-right:10px;
+}
+.assignResult .orange{
+	background:#fab344;
+	display:inline-block;
+	width:15px;
+	height:15px;
+	margin-right:10px;
+}
+
+/*词组设置*/
+.word_group{
+	background:#fff;
+	width:95%;
+	display:inline-block;
+	margin:10px 0 5px 0;
+}
+.word_group .word_group1{
+	width:95%;
+	height:20px;
+	background:#fff;
+	border-bottom:1px solid #bbb;
+	margin:15px 0;
+	text-align: left;
 }
 
 /*输入玩家数量部分*/
@@ -131,14 +181,12 @@ input[type="text"]{
 	margin:0; 
 	font-size:1.2em;
 	text-align:center;
-
 }
 
 .notice{
 	color:#fab344;
 	font-size:.8em;
 }
-
 
 /*滑动条前面的减号*/
 #reduce{
@@ -222,14 +270,13 @@ input[type="range"]::-ms-fill-upper{
 button{
 	height:85px;
 	width:96%;
-	background:#fab344;;
+	background:#fab344;
 	color:#fff;
 	font-size:1.8em;
 	line-height:85px;
 	margin:20px 0;
 	outline:none;
 	border:none;
-
 }
 
 
