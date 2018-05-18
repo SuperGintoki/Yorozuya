@@ -1,0 +1,21 @@
+/*重设body的样式*/
+body{
+	margin: 0;
+	padding: 10px;
+	overflow:hidden;
+}
+
+.left, .middle, .right{
+	width: 25vw;
+    height: 25vw;
+	background: orange;
+	margin:1%;
+	border-radius:10%;
+	float:left;
+}
+
+/*只需清除最左边方块的浮动即可使方块换行*/
+.left{
+	clear: both;
+}
+
