@@ -2,13 +2,13 @@
 body{
 	margin: 0;
 	padding: 0;
-	/*浏览器的滚动条会对vw单位产生影响，故消除滚动条*/
+	/*浏览器的滚动条会对vw单位产生影响，需消除滚动条*/
 	overflow:hidden;  
 }
 
 div{
 	width: 31vw;
-    padding-bottom: 31vw;
+    height: 31vw;
 	background: orange;
 	margin:1%;
 	border-radius:10%;
