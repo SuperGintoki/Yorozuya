@@ -1,0 +1,892 @@
+/*citing the specified font*/
+@font-face{
+	font-family: "Montserrat ExtraLight"
+	src: url("Montserrat-ExtraLight.pfb/Montserrat-ExtraLight.pfb.ttf");
+}
+
+body, h1,figure{
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+body{
+	font-family: "Montserrat ExtraLight";
+}
+
+html{
+	font-size: 625%;
+}
+
+/***********header setup****************
+
+/*header background image setup*/
+header{
+	height: 700px;
+	text-align: center;
+	background: url(images/header-bg.png);
+}
+
+/*hello world setup*/
+.announcement{
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 90px;
+	width: 55%;
+	font-size: 0.16rem;
+	color: #d2d1d0;
+}
+
+.announcement h1{
+	margin-bottom: 45px;
+	font-size: .6rem;
+	font-weight: 100;
+	color: #eee;
+}
+
+/*form part setup*/
+.header-form{
+	border: 1px solid #777571;
+	margin-top: 70px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 75%;	
+	font-size: 0.13rem;
+	color: #d2d1d0;
+}
+
+.create-accout{
+	margin-top: 45px;
+	font-size: 0.16rem;
+	color: #eee;
+}
+
+/*create account input setup*/
+.header-form input[type="text"]{
+	border: 1px solid #777571;
+	margin-top: 45px;
+	margin-bottom: 60px;
+	margin-right: 25px;
+	padding-left: 25px;
+	height: 50px;
+	width: 30%;
+	background-color: rgba(0,0,0,0);
+	outline: none;
+}
+
+/*change the color of placeholder, FF is compatible*/
+input.accout::-webkit-input-placeholder{  
+	color: #777571;  /*webkit browsers*/
+}
+
+input.accout::-moz-input-placehoder{
+	color: #777571;     /*mozilla FF 4-18*/
+}
+
+input.accout::-moz-placeholder{
+	color: #777571;   /*mozilla FF 19+*/
+}
+
+input.accoutl::-ms-input-placeholder{
+	color: #777571;     /*IE 10+*/
+}
+
+
+/*change the color of placeholder*/
+input.email::-webkit-input-placeholder{  
+	color: #eee;     /*webkit browsers*/
+}
+
+input.email::-moz-input-placehoder{
+	color: #eee;     /*mozilla FF 4-18*/
+}
+
+input.email::-moz-placeholder{
+	color: #eee;   /*mozilla FF 19+*/
+}
+
+input.email::-ms-input-placeholder{
+	color: #eee;     /*IE 10+*/
+}
+
+/*sign up button*/
+.header-form input[type="submit"]{
+	border: none;
+	width: 15%;
+	height: 50px;
+	outline: none;
+	background-color: #fff;
+}
+
+/*********feature setup**************/
+
+/*feature head setup*/
+.feature-head{
+	margin-top: 90px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 55%;
+	text-align: center;
+	color: #3c3c3c;
+
+}
+
+.feature-head p{
+	margin-bottom: 40px;
+	font-size: 0.14rem;
+	font-weight: 700;
+
+}
+
+.feature-head h1{
+	font-size: 0.38rem;
+	font-weight: 100;
+}
+
+/*four features content setup*/
+.feature-content{
+	overflow: hidden;
+	zoom: 1;
+	margin-left: auto;
+	margin-right: auto;
+	width: 75%;
+	font-size: 0.16rem;
+
+}
+
+/*figure setup*/
+figure{
+	margin-top: 90px;
+	width: 45%;
+}
+
+/*making two features left align, and others right align*/
+.left{
+	float:left;
+}
+
+.right{
+	float:right;
+}
+
+/*figure caption and figure content setup*/
+figcaption{
+	margin-left: 80px;
+	font-size: 0.17rem;
+	font-weight: 600;
+	color: #3c3c3c;
+}
+
+figure p{
+	margin-left: 80px;
+	color: #acacac;
+}
+
+/*four icons setup*/
+.iphone{
+	float: left;
+	margin-left: 10px;
+	width: 30px;
+	height: 49px;
+	background: url(images/day9-11.png) -246px -10px;
+}
+
+.check{
+	float: left;
+	margin-left: 5px;
+	width: 40px;
+	height: 37px;
+	background: url(images/day9-11.png) -150px -116px;
+}
+
+.pencil{
+	float: left;
+	width: 50px;
+	height: 49px;
+	background: url(images/day9-11.png) -10px -116px;
+}
+
+.setting{
+	float: left;
+	width: 50px;
+	height: 42px;
+	background: url(images/day9-11.png) -80px -116px;
+}
+
+/***********call to action is here**************/
+
+/*background image*/
+.call-to-action{
+	position: relative;
+	margin-top: 100px;
+	height: 800px;
+	background: url(images/call-to-action-bg.png);
+	font-size: .2rem;
+}
+
+/*adding mask to background image*/
+.call-to-action:after{
+	content:"";
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, .6);
+	height: 100%;
+	width: 100%;
+}
+
+/*calling to get free product*/ 
+.free-product{
+	position: absolute;
+	left: 12.5%;
+	z-index: 9999;
+	width: 38%;
+	color: #fff;
+}
+
+.free-product h1{
+	margin-top: 210px;
+	font-size: .35rem;
+	font-weight: 100;
+	color: #eee;
+}
+
+.free-product p{
+	margin-top: 50px;
+	font-size: 0.16rem;
+	font-weight: 100;
+	color: #acacac;
+}
+
+.free-product div{
+	width: 70%;
+}
+
+/*input button setup*/
+.free-product input{
+	border: 1px solid #777571;
+	outline: none;
+	border-radius: 5px;
+	margin-top: 60px;
+	margin-right: 9.2%;
+	width: 40%;
+	height: 60px;
+	font-size: 0.12rem;
+	background: rgba(0, 0, 0, 0);
+	color: #fff;
+}
+
+.free-product .active{
+	background-color: #fff;
+	color: #000;
+}
+
+/*setup ipad*/
+.data{
+	position: absolute;
+	top: 50%;
+	right: -13%;
+	z-index: 9999;
+	border: 1px solid #777571;
+	border-radius: 50px;
+	margin-top: -240px;
+	height: 480px;
+	width: 55%;
+	color: #fff;
+}
+
+/*the carme of ipad???*/
+.data span{
+	position: absolute;
+	top: 50%;
+	border: 1px solid #777571;
+	border-radius: 50%;
+	margin-top: -5px;
+	margin-left: 4.5%;
+	height: 10px;
+	width: 10px;
+
+}
+
+/*the ipad frame including the data*/
+.ipad-frame{
+	box-sizing: border-box;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	width: 86%;
+	height: 440px;
+	text-align: center;
+	background-color: #fff;
+	color: #444;
+}
+
+/*这里有一些教程文档......*/
+.ipad-frame > p{
+	font-size: 0.16rem;
+	color: #7c7c7c;
+}
+
+/*data tab control*/
+.course, .guid, .example{
+	display: inline-block;
+	box-shadow: 0 0 2px 2px #eee;
+	margin-top: 20px;
+	margin-right: 3%;
+	width: 26%;
+	height: 240px;
+	vertical-align: top;
+}
+
+/*img and background setup*/
+.course div, 
+.guid div, 
+.example div{
+	height: 120px;
+	line-height: 120px;
+	text-align: center;
+}
+
+.course div{
+	background-color: #773fc1;
+}
+
+.guid div{
+	background-color: #18c5cb;
+}
+
+.example div{
+	background-color: #2da2f8;
+}
+
+/*image center*/
+.course img, 
+.guid img,
+.example img{
+	vertical-align: middle;
+}
+
+.data-head{
+	padding-left: 10px;
+	font-size: 0.17rem;
+	font-weight: 600;
+	text-align: left;
+}
+
+.data-intro{
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 0.14rem;
+	text-align: left;
+}
+
+/********try our products is here************/
+
+/*try-product frame setup*/
+.try-product{
+	border-bottom: 1px solid #e7e7e7;
+	font-size: 0.19rem;
+	text-align: center;
+}
+
+/*try our product head*/
+.try-product h1{
+	font-size: .4rem;
+	font-weight: 100;
+	color: #333;
+	margin-top: 100px;
+}
+
+/*fixed the width*/
+.product-frame{
+	margin-left: auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+/*four iamges*/
+.singleton{
+	display: inline-block;
+	width: 120px;
+	height: 35px;
+	background: url(images/day9-11.png) -10px -10px;
+}
+
+.hero{
+	display: inline-block;
+	width: 76px;
+	height: 34px;
+	background: url(images/day9-11.png) -150px -10px;
+}
+
+.portland{
+	display: inline-block;
+	width: 117px;
+	height: 42px;
+	background: url(images/day9-11.png) -10px -65px;
+}
+
+.products{
+	display: inline-block;
+	margin-top: 100px;
+	margin-bottom: 100px;
+	margin-right: 5%;
+	width: 27%;
+	vertical-align: top;
+}
+
+/*detailed content setup*/
+.products p{
+	margin-top: 40px;
+	font-size: 0.16rem;
+	color: #777571;
+}
+
+/************introduction part**************/
+
+/*frame setup*/
+.introduction{
+	overflow: hidden;
+	zoom: 1;
+	border-bottom: 1px solid #e7e7e7;
+	font-size: .2rem;
+}
+
+/*leaf and bird iamge*/
+.leaf,
+.bird{
+	margin-left: auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.leaf{
+	margin-top: 100px;
+}
+
+.bird{
+	margin-top: 60px;
+}
+
+/*leaf part*/
+.leaf div{
+	float: right;
+	padding-top:6%;
+	padding-bottom: 6%;
+	padding-right: 20px;
+	width: 320px;	
+}
+
+/*font of iamges*/
+.leaf-content,
+.bird-content{
+	font-size: 0.14rem;
+}
+
+.bird img{
+	float: right;
+	padding-right: 20px;
+}
+
+.bird div{
+	margin-bottom: 100px;
+	padding-top:8%;
+	padding-bottom: 8%;
+	width: 320px;	
+}
+
+/************our awesome crew**********/
+
+/*font size setup*/
+.member{
+	margin: 70px auto 100px auto;
+	width: 74%;
+	font-size: 0.14rem;
+	text-align: center;
+	color: #777571;
+}
+
+.member-head{
+	margin-left: auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.crew{
+	font-size: 0.35rem;
+	color: #555;
+}
+
+.member img{
+	margin-top: 50px;
+	margin-right: 5px;
+}
+
+/******mask setup********/
+
+/*adding the social sofeware image*/
+.facebook-icon{
+	display: inline-block;
+	width: 8px;
+	height: 19px;
+	background: url(images/day9-11-1.png) -132px -10px;
+}
+
+.twitter-icon{
+	display: inline-block;
+	width: 19px;
+	height: 16px;
+	background: url(images/day9-11-1.png) -48px -51px;
+}
+
+.instagram-icon{
+	display: inline-block;
+	width: 21px;
+	height: 21px;
+	background: url(images/day9-11-1.png) -10px -10px;
+}
+
+.hand-icon{
+	display: inline-block;
+	width: 18px;
+	height: 21px;
+	background: url(images/day9-11-1.png) -10px -51px;
+}
+
+/*member mask setup*/
+.member-mask{
+	display: none;
+	position: absolute; 
+	top: 50px;
+	box-sizing: border-box;
+	padding-top: 15%;
+	padding-bottom: 15%;
+	width: 470px;
+	height: 340px;
+	font-size: .2rem;
+	background: rgba(0, 0, 0, .5);
+	color: #fff;
+}
+
+/*the career of mask*/
+.career{
+	font-size: 0.15rem;
+	color: #ddd;
+}
+
+/*hand icon of mask*/
+.hand-icon{
+	padding-top: 20px;
+}
+
+/*social soteware of mask*/
+.member-mask span{
+	display: inline-block;
+	margin: 20px;
+	border: 1px solid #777571;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+}
+
+a{
+	position: relative;
+	display: inline-block;
+}
+
+/*the mask will appear after mouse hover*/
+a:hover .member-mask{
+	display: block;
+}
+
+/***********contact setup**************/
+
+/*the global setting of contact*/
+.contact{
+	border-top: 1px solid #e7e7e7;
+	padding-top: 100px;
+	margin-bottom: 100px;
+	font-size: .19rem;
+}
+
+.contact > div{
+	margin-left: auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+/*form frame setup*/
+.contact-form{
+	display: inline-block;
+	padding-top: 30px;
+	border: 1px solid #e7e7e7;
+	width: 50%;
+	text-align: center;
+}
+
+/*form title setup*/
+form label{
+	font-size: 0.18rem;
+	color: #444;
+}
+
+/*input setup*/
+.contact-form input[type="text"]{
+	border: 1px solid #e7e7e7;
+	margin: 30px auto 0 auto;
+	padding-left: 24px;
+	width: 70%;
+	height: 50px;
+}
+
+/*textarea setup*/
+textarea{
+	box-sizing: border-box;
+	border: 1px solid #e7e7e7;
+	outline: none;
+	margin: 30px auto 0 auto;
+	padding-left: 24px;
+	padding-top: 15px;
+	width: 75%;
+	height: 120px;
+}
+
+/*change the color of textarea's placeholder*/
+textarea::-webkit-input-placeholder{  
+	font-family: arial;
+	color: #555;     /*webkit browsers*/
+}
+
+textarea.email::-moz-input-placehoder{
+	font-family: arial;
+	color: #555;     /*mozilla FF 4-18*/
+}
+
+textarea.email::-moz-placeholder{
+	font-family: arial;
+	color: #555;   /*mozilla FF 19+*/
+}
+
+textarea.email::-ms-input-placeholder{
+	font-family: arial;
+	color: #555;     /*IE 10+*/
+}
+
+/*send button setup*/
+.contact-form input[type="submit"]{
+	border: 1px solid #e7e7e7;
+	margin: 30px auto;
+	width: 75%;
+	height: 50px;
+	background-color: #141414;
+	color: #fff;
+}
+
+/*contact information setup*/
+.contact-info{
+	display: inline-block;
+	padding-left: 80px;
+	width: 40%;
+}
+
+.contact-info h1{
+	font-weight: 100;
+	margin-bottom: 30px;
+}
+
+.contact-content{
+	font-size: 0.15rem;
+	color: #777571;
+	margin-bottom: 70px;
+}
+
+/*the address, phone number, email of contact information*/
+.contact-info div{
+	margin-bottom:150px;
+	font-size: 0.15rem;
+}
+
+.contact-info .phone-frame{
+	margin-top: -110px;
+}
+
+.contact-info .mail-frame{
+	margin-top: -110px;
+}
+
+/*three icons of information*/
+.map{
+	display: inline-block;
+	width: 19px;
+	height: 25px;
+    background: url(images/day9-11.png) -246px -123px;
+}
+
+.phone{
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+    background: url(images/day9-11.png) -246px -79px;
+}
+
+.mail{
+	display: inline-block;
+	width: 24px;
+	height: 19px;
+    background: url(images/day9-11.png) -150px -64px;
+}
+
+/****************footer from here**************/
+
+footer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: -50px;
+	height: 400px;
+	background-color: #141414;
+}
+
+footer div{
+	display: inline-block;
+	width: 20%;
+	color: #fff;
+}
+
+footer div p{
+	margin-top: 30px;
+	font-size: 0.15rem;
+	text-align: left;
+	color: #777571;
+}
+
+footer h2{
+	font-size: 0.18rem;
+	font-weight: 100;
+}
+
+.twitter{
+	display: inline-block;
+	width: 17px;
+	height: 17px;
+	background: url(images/day9-11-1.png) -73px -92px;
+}
+
+footer i{
+	margin-bottom: 60px;
+}
+
+.facebook{
+	display: inline-block;
+	width: 9px;
+	height: 17px;
+	background: url(images/day9-11-1.png) -44px -92px;
+}
+
+.google{
+	display: inline-block;
+	width: 24px;
+	height: 16px;
+	background: url(images/day9-11-1.png) -51px -10px;
+}
+
+.tumblr{
+	display: inline-block;
+	width: 9px;
+	height: 17px;
+	background: url(images/day9-11-1.png) -73px -92px;
+}
+
+.pinterest{
+	display: inline-block;
+	width: 14px;
+	height: 18px;
+	background: url(images/day9-11-1.png) -10px -92px;
+}
+
+.linkedin{
+	display: inline-block;
+	width: 16px;
+	height:17px;
+	background: url(images/day9-11-1.png) -95px -47px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
