@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"> -->
+		<meta http-equiv="X-UA-Compatible" content="IE-edge">
+		<title>第十二天到第十五天： 复杂页面实现</title>
+		<link rel="stylesheet" href="day12-15.css">
+	</head>
+	<body>
+		<!-- sidebar including some tags and extensions -->
+		<div class="navigation">
+			<div class="sidebar">
+				<div class="sidebar-img">
+					<img src="images/plane.png">
+					<img src="images/rocket.png">
+					<img src="images/game.png">
+					<img src="images/base.png">
+				</div>
+				<div>
+					<i class="extensions"></i><i class="setting"></i>	
+				</div>
+			</div>
+			<!-- navigation and menu -->
+			<nav>
+				<div class="nav">
+					<ul class="menu">
+						<li>MENU
+							<i class="setting"></i>
+							<ul class="subnav">
+								<li>Overview</li>
+								<li>Sales<span class="notice">54</span></li>
+								<li>Your Staff</li>
+								<li>Analytics &amp; Targeting</li>
+								<li>What's New</li>
+							</ul>
+						</li>
+						<li>YOUR PRODUCTS
+							<i class="setting"></i>
+							<ul class="subnav">
+								<li>
+									<i class="books"></i>
+									Books
+								</li>
+								<li>
+									<i class=tutorials></i>
+									Tutorials
+								</li>
+								<li>
+									<i class="stocks"></i>
+									Stocks
+								</li>
+								<li>
+									<i class="info"></i>
+									Infograpgics
+								</li>
+							</ul>
+						</li>
+						<li>DASHBOARO
+							<i class="setting"></i>
+							<ul class="subnav">
+								<li class="position"><span class="active"></span>Message<span class="notice">21</span></li>
+								<li>Connections</li>
+								<li>Integrations<i class="warn"></i></li>
+								<li>Account Setting</li>
+								<li>App Settings</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="goals">
+					<span class="monthly">Monthly Goals</span>
+					<span>$580/$3200</span>
+					<span class="color-mask"></span>
+					<input type="range">
+				</div>					
+			</nav>
+        </div>
+		<!-- main content -->
+		<main>
+			<div class="head">
+				<h1>Messages</h1>
+				<div class="profile">
+				    <i class="Jordan"></i>
+				    <i class="arrow"></i>
+				    <div>
+					    <p class="name">Jordan&nbsp;J.</p>
+					    <p>Administrator</p>
+				    </div>
+				</div>
+			</div>
+			<div class="list">
+				<!-- serach box is here -->
+				<div class="search-box">
+					<input type="search" placeholder="Search">
+					<i class="zoom"></i>
+				</div>
+				<!-- friend list from here -->
+				<div class="friend choosen">
+					<i class="bessie"></i>
+					<p class="friend-active"><span class="circle"></span>Bessie Berry<span class="distance">3m</span></p>
+					<p class="software">Twitter</p>
+					<p class="berry">I pay for the 4Mb/sec down, 512 Kb/sec up service from O2. In fact, it's relatively quick...</p>
+					<span>4</span>
+				</div>
+				<div class="friend">
+					<i class="victor"></i>
+					<p class="friend-name">Victor Weber<span>8m</span></p>
+					<p class="software">Adobe</p>
+					<p>I shared this on my fb wall a few months back, and I thought I'd share it here again because it's such...</p>
+				</div>
+				<div class="friend">
+					<i class="dustin"></i>
+					<p class="friend-name">Dustin Benson<span>Yesterday</span></p>
+					<p class="software">Facebook</p>
+					<p>If there is anyone who needs an invitation please add yourself in the comments of this post!</p>
+				</div>
+				<div class="friend">
+					<i class="jack"></i>
+					<p class="friend-name">Jack Mason<span>Yesterday</span></p>
+					<p class="software">Yahoo</p>
+					<p>BruteDC is a peer-to-peer movie+tv series sharing and downloading platform which works on intranet...</p>
+				</div>
+				<div class="friend">
+					<i class="stephen"></i>
+					<p class="friend-name">Stephen Shelton<span>13 June</span></p>
+					<p class="software">Snapchat</p>
+					<p>Yes, p2p traffic is often filtered (QoSed). Although i do use BT on O2 wires, and in good days dl speed...</p>
+				</div>
+				<div class="friend">
+					<i class="sally"></i>
+					<p class="friend-name">Sally Willis<span>12 June</span></p>
+					<p class="software">Twitter</p>
+					<p>Yes, it's O2: 'internet extreme', which is no longer offered.</p>
+				</div>
+				<div class="friend">
+					<i class="robert"></i>
+					<p class="friend-name">Robert Patton<span>9 June</span></p>
+					<p class="software">A Team</p>
+					<p>Yes, it's O2: 'internet extreme', which is no longer offered.</p>
+				</div>
+		    </div>
+		    <!-- communiation record is here -->
+		    <div class="communication">
+		    	<div class="comm-person">
+			    	<p>Bessie Berry <span></span></p>
+			    	<ul>
+				    	<li class="comm-add"><i class="add"></i>
+				    	<li><i class="download"></i>
+				    	<li class="comm-delete"><i class="delete"></i>
+				    	<li class="time">1 of 28
+				    	<li class="comm-right"><i class="right"></i>
+				    	<li class="comm-left"><i class="left"></i></li>
+			        </ul>
+		        </div>
+		        <!-- communication area is here -->
+		        <div class="message">
+		        	<div class="message-con">
+		        		<i class="bessie"></i>
+		        		<p class="name">Bessie Berry<span>8:31 AM</span></p>
+		        		<p>Hi guys Ive got the O2 package and have really slow internet. A speed check online said i can get 3mbps but it seems more like 0.5 these days, just freezing and taking ages to open pages and open audio files for example. I have decided to switch to the UPC package which offers 10mbps but do you think i will get it?</p>
+		        	</div>	
+		        	<div class="message-con special">
+		        		<i class="jordan"></i>
+		        		<p class="name">Jordan Jackson<span>8:31 AM</span></p>
+		        	    <p>I have internet for 9 month and nevere could benefit from the full capacity of 5Mbit/s as it is filtered by O2 when it detect traffic on public p2p sharing in my situation all my internet speed slows to 512Kbit/s. I never had 400KB/s on when downloading from p2p public servers like torrent emule etc. I downoad with 500KB/s from private trakers instead. So conlcusion O2 block trafic on p2p connections. I have made hundreds of test in Italy and Sweden and Romania with the same file to doanload with the same setting and same antivirus and just needed to open ports in firewall and forward same ports and the speed was at full capacity in 1 minute. here in 9 month never had this luck.</p>
+		        	</div>	        	
+		        </div>
+		        <div class="message blue">
+		        	<div class="message-time">Tuesday</div>
+		        	<div class="message-con">
+		        		<i class="bessie"></i>
+		        		<p class="name">Bessie Berry<span>8:31 AM</span></p>
+		        		<p>Funny comparison. so would the proper antivirus not slow down the internet as much or do you mean a freebie doenst protect the computer from viruses?</p>
+		        	</div>
+		        	<div class="message-con special">
+		        		<i class="jordan"></i>
+		        		<p class="name">Jordan Jackson<span>8:31 AM</span></p>
+		        	    <p>I pay for the 4Mb/sec down, 512 Kb/sec up service from O2, and haven't had any problems. In fact, it's relatively quick, and stable. It's not perfect, but I really don't have issues, as long as I keep track of what I'm doing on it. I max out at about 3 Mb/sec down, and 350 Kb/sec up. Probably because of a noisy telephone line, not because I'm being throttled. When my uploads go over 25 KB/sec (note, bytes, not bits), my download speed suffers. This is expected, as downloads require upload bandwidth as well. </p>
+		        	    <img class="one" src="images/one.png">
+		        	    <div class="two">
+			        	    <img src="images/two.png">
+			        	    <div>
+			        	    	<i class="zoom-img"></i>
+			        	    </div>
+			        	</div>
+		        	</div>
+		        </div>
+		        <div class="message">
+		        	<div class="message-now">New Messages</div>
+		        	<div class="message-con">
+		        		<i class="bessie"></i>
+		        		<p class="name">Bessie Berry <span>8:31 AM</span></p>
+		        	    <p>I pay for the 4Mb/sec down, 512 Kb/sec up service from O2. In fact, it's relatively quick, and stable. It's not perfect, but I really don't have issues, as long as I keep track of what I'm doing on it. </p>
+		        	</div>
+		        	<div class="dialog">
+		        		<span><i class="plus"></i></span>
+		        		<input type="text" value="Well, kinda both :) but more of that second option, i've seen many systems infected and crawing with|">
+		        	</div>
+		        </div>
+		    </div>
+		</main>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

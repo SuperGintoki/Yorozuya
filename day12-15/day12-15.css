@@ -1,0 +1,773 @@
+/*global setting*/
+body,
+html,
+nav,
+ul,
+h1{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	display: flex;
+}
+html{
+	font: 625% arial san-serif;
+}
+
+/***********左侧深颜色部分的侧边栏和导航栏**********************/
+
+/*左侧身颜色部分始终固定在屏幕左侧，且高度自适应*/
+.navigation{
+	display: flex;
+	align-items: stretch;
+}
+
+/*设置sidebar的宽度和背景*/
+.sidebar{
+	width: 100px;
+	background-color: #1d2531;
+}
+
+/*sidebar顶部四个图标*/
+.sidebar img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 25px;
+}
+
+/*sidebar上方的四个图片固定*/
+.sidebar-img{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100px;
+}
+
+/*底部两个图标*/
+.extensions{
+	display: inline-block;
+	margin-right: 20%;
+	width: 18px;
+	height: 18px;
+	background: url(images/day12-15.png) -212px -158px;
+}
+
+.sidebar .setting{
+	display: inline-block;
+	width: 18px;
+	height: 19px;
+	background: url(images/day12-15.png) -212px -119px;
+}
+
+/*底部两个图标位于底部且居中*/
+.sidebar div{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100px;
+	text-align:center;
+}
+
+/******************导航列部分************/
+
+/*固定宽度的导航列*/
+nav{
+	width: 250px;
+	background-color: #222c3c;
+}
+
+/*导航列固定*/
+.nav{
+	position: fixed;
+	width: 250px;
+}
+
+/*一级导航设置*/
+.menu > li{
+	border-bottom: 1px solid #5b6779;
+	margin: 25px auto;
+	padding-bottom: 25px;
+	width: 190px;
+	font-size: 0.14rem;
+    color: #5b6779;
+    list-style: none;
+}
+
+/*二级导航设置*/
+.subnav li{
+	padding-top: 10px;
+	color: #b7c0cd;
+	list-style: none;
+}
+
+/*一级导航旁边的设置按钮*/
+.menu .setting{
+	float: right;
+	width: 16px;
+	height: 16px;
+	background: url(images/day12-15.png) -279px -121px;
+}
+
+/*二级导航中新消息条数提醒*/
+.notice{
+	float: right;
+	border-radius: 25px;
+	width: 35px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	background-color: #2197f0;
+	color: #fff;
+}
+
+/*Your products部分的四个图标*/
+.books{
+	display: inline-block;
+	margin-right: 5px;
+	width: 19px;
+	height: 16px;
+	vertical-align: middle;
+	background: url(images/day12-15.png) -10px -212px;
+}
+
+.tutorials{
+	display: inline-block;
+	margin-right: 5px;
+	width: 20px;
+	height: 13px;
+	vertical-align: middle;
+	background: url(images/day12-15.png) -88px -212px;
+}
+
+.stocks{
+	display: inline-block;
+	margin-right: 5px;
+	width: 19px;
+	height: 17px;
+	vertical-align: middle;
+	background: url(images/day12-15.png) -146px -78px;
+}
+
+.info{
+	display: inline-block;
+	margin-right: 5px;
+	width: 19px;
+	height: 16px;
+	vertical-align: middle;
+	background: url(images/day12-15.png) -49px -212px;
+}
+
+/*Integration的红色提醒图标*/
+.warn{
+	float: right;
+	width: 25px;
+	height: 24px;
+	background: url(images/day12-15.png) -212px -75px;
+}
+
+/*设置被选中的导航*/
+.subnav .position{
+	position: relative;
+	color: #fff;
+}
+
+/*message左边的蓝色小三角*/
+.active{
+	position: absolute;
+	top: 17px;
+	left: -30px;
+	width: 0;
+	height: 0;
+	border: 3px solid;
+	border-color: transparent transparent transparent #2197f0;
+}
+
+/*底部Monthly Goals和进度条设置*/
+.goals{
+	position: fixed;
+	bottom: 10px;
+	width: 250px;
+	font-size: 0.14rem;
+	text-align: center;
+	color: #fff;
+}
+
+.monthly{
+	display: inline-block;
+	margin-right: 20px;
+}
+
+/*input 进度条设置*/
+.goals input[type="range"]{
+	-webkit-appearance: none; */   /*去除默认样式*/
+	border-radius: 5px;
+	width: 190px;
+	height: 5px;
+	background: #2d3848;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+	-webkit-appearance: none;  /*去除滑块默认样式*/
+	width: 0;
+	height: 0;
+}
+
+/*进度条前半部分*/
+.color-mask{
+	position: absolute;
+	bottom: 5px;
+	left: 30px;
+    border-radius: 5px 0 0 5px;
+	width: 60px;
+	height: 5px;
+	background-color: #937de4;
+}
+
+/*****************主内容区**************/
+
+/*右边空白部分设置*/
+main{
+	font-size: 0.19rem;
+} 
+
+/*头部fixed在页面顶部*/
+.head{
+	position: fixed;
+	top: 0;
+	left: 350px;
+	right: 0;
+	z-index: 9999;
+	border-bottom: 1px solid #e6e9ec;
+	height: 80px;
+	background-color: #fff;
+}
+
+/*头部Message设置*/
+.head h1{
+	display: inline-block;
+	margin-left: 30px;
+	line-height: 80px;
+	font-size: .4rem;
+	font-weight: 100;
+}
+
+/*右边的jordan J 头像*/
+.profile{
+	float: right;
+	font-size: 0.14rem;
+}
+
+/*Jordan头像*/
+.Jordan{
+	display: inline-block;
+	margin-top: 15px;
+	width: 49px;
+	height: 50px;
+	background: url(images/day12-15.png) -10px -10px;
+}
+
+/*Jordan的文字介绍*/
+.profile div{
+	float: right;
+	margin-left: 20px;
+}
+
+.profile p{
+	margin: 0;
+	color: #666;
+}
+
+/*Jordan的名字设置*/
+.profile .name{
+	margin-top: 20px;
+	font-size: 0.16rem;
+	color: #2399f1;
+}
+
+/*头像旁边的箭头*/
+.arrow{
+	float: right;
+	margin-top: 36px;
+	margin-left: 30px;
+	margin-right: 20px;
+	width: 12px;
+	height: 10px;
+	background: url(images/day12-15.png) -146px -115px;
+}
+
+/*************好友列表*******************/
+
+/*好友列表固定宽度*/
+.list{
+	float: left;
+	border-right: 1px solid #e6e9ec;
+	margin-top: 80px;
+	width: 400px;
+}
+
+/*搜索框*/
+.search-box{
+	position: relative;
+	border-bottom: 1px solid #e6e9ec;
+	height: 75px;
+}
+
+.search-box input{
+	border: 1px solid #e6e9ec;
+	border-radius: 5px;
+	margin-top: 18px;
+	margin-left: 30px;
+	padding-left: 20px;
+	width: 340px;
+	height: 40px;
+	outline: none;
+}
+
+/*放大镜图片*/
+.zoom{
+	position: absolute;
+	margin-top: 29px;
+	right: 45px;
+	width: 17px;
+	height: 17px;
+	background: url(images/day12-15.png) -279px -47px;
+
+}
+
+/*好友头像*/
+.bessie{
+	float: left;
+	width: 48px;
+	height: 46px;
+	background: url(images/day12-15.png) -10px -80px;
+}
+
+.victor{
+	float: left;
+	width: 47px;
+	height: 46px;
+	background: url(images/day12-15.png) -77px -146px;
+}
+
+.dustin{
+	float: left;
+	width: 47px;
+	height: 47px;
+	background: url(images/day12-15.png) -79px -10px;
+}
+
+.jack{
+	float: left;
+	width: 46px;
+	height: 48px;
+	background: url(images/day12-15.png) -146px -10px;
+}
+
+.stephen{
+	float: left;
+	width: 48px;
+	height: 46px;
+	background: url(images/day12-15.png) -78px -80px;
+}
+
+.sally{
+	float: left;
+	width: 47px;
+	height: 46px;
+	background: url(images/day12-15.png) -144px -146px;
+}
+
+.robert{
+	float: left;
+	width: 47px;
+	height: 45px;
+	background: url(images/day12-15.png) -212px -10px;
+	}
+
+/*好友框架设置*/
+.friend{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-line-clamp: 2;
+	border-bottom: 1px solid #e6e9ec;
+	padding: 15px 30px;
+	height: 100px;
+	font-size: 0.13rem;
+	color: #666;
+}
+
+/*好友名字样式设置*/
+.friend-name{
+	margin-top: 5px;
+	margin-bottom: 0;
+	margin-left: 70px;
+	font-size: 0.16rem;
+	color: #222;
+}
+
+/*与好友交流的时间或者距离*/
+.friend-name span,
+.distance{
+	float: right;
+	font-size: 0.14rem;
+	color: #666;
+}
+
+/*好友所用软件*/
+.software{
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 70px;
+	font-size: 0.15rem;
+	color: #bbb;
+}
+
+/*bessie berry设置*/
+.friend-active{
+	margin-top: 5px;
+	margin-bottom: 0;
+	margin-left: 70px;
+	font-size: 0.17rem;
+	color: #00aaff;
+}
+
+.berry{
+	padding-right: 40px;
+}
+
+.choosen{
+	border-left: 3px solid #00aaff;
+}
+
+/*bessie被选中*/
+.circle{
+	display: inline-block;
+	border-radius: 50%;
+	margin-right: 10px;
+	width: 10px;
+	height: 10px;
+	background-color: #00aaff;
+}
+
+/*新信息条数*/
+.friend > span{
+	float: right;
+	margin-top: -40px;
+	border-radius: 50%;
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	background-color: #00aaff;
+	color: #fff;
+}
+
+/***********联系记录***************/
+.communication{
+	margin-top: 80px;
+	padding-left: 400px;
+	
+}
+.comm-person{
+	border-bottom: 1px solid #e6e9ec;
+	height: 53px; 
+	padding-top: 22px;
+}
+
+.comm-person p{
+	display: inline-block;
+	margin-top: 5px;
+	margin-left: 20px;
+}
+
+.comm-person p span{
+	display: inline-block;
+	border-radius: 50%;
+	margin-left: 10px;
+	width: 10px;
+	height: 10px;
+	background-color: #1bb934;
+}
+
+.add{
+	display: inline-block;
+	width: 17px;
+	height: 17px;
+	background: url(images/day12-15.png) -279px -10px;
+}
+
+.download{
+	display: inline-block;
+	width: 16px;
+	height: 15px;
+	background: url(images/day12-15.png) -279px -157px;
+}
+
+.delete{
+	display: inline-block;
+	width: 16px;
+	height: 17px;
+	background: url(images/day12-15.png) -279px -84px;
+}
+
+.left{
+	display: inline-block;
+	width: 6px;
+	height: 10px;
+	background: url(images/day12-15.png) -250px -119px;
+}
+
+.right{
+	display: inline-block;
+	width: 6px;
+	height: 10px;
+	background: url(images/day12-15.png) -250px -119px;
+	transform: rotate(180deg);
+}
+
+.comm-person ul{
+	float: right;
+	margin-right: 20px;
+}
+
+.comm-person li{
+	display: inline-block;
+	border: 1px solid #e6e9ec;
+	margin-left: -1px;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #fafbfc;
+	list-style: none;
+}
+
+.comm-add, 
+.comm-right{
+	border-radius: 5px 0 0 5px;
+}
+
+.comm-delete,
+.comm-left{
+	border-radius: 0 5px 5px 0;
+}
+
+.comm-person .time{
+	border: none;
+	border-left: 1px solid #e6e9ec;
+	margin-left: 20px;
+	width: 60px;
+	line-height: 30px;
+	font-size: 0.13rem;
+	background: #fff;
+}
+
+.jordan{
+	float: left;
+	width: 47px;
+	height: 46px;
+	background: url(images/day12-15.png) -10px -146px;
+}
+
+.message{
+	position: relative;
+	border-bottom: 1px solid #e6e9ec;
+	border-left: 1px solid #e6e9ec;
+	padding: 20px;
+	font-size: 0.13rem;
+	color: #666;
+}
+
+.special{
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+.message-con p{
+	margin-left: 70px;
+}
+
+.message .name{
+	font-size: 0.17rem;
+	color: #333;
+}
+
+.message .name span{
+	display: inline-block;
+	margin-left: 20px;
+	font-size: 0.15rem;
+	color: #999;
+}
+
+.special .one{
+	margin-left: 70px;
+	margin-right: 10px;
+}
+
+.zoom-img{
+	display: block;
+	margin-top: 17px;
+	margin-left: 17px;
+	width: 16px;
+	height: 15px;
+	background: url(images/day12-15.png) -279px -192px;
+}
+.two{
+	position: relative;
+	display: inline-block;
+}
+.two div{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -25px;
+	margin-left: -26px;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #7f8083;
+}
+
+.blue{
+	border-bottom: 1px solid #2399f1;
+}
+.message-time{
+	position: absolute;
+	top: -12px;
+	left: 50%;
+	margin-left: -40px;
+	width: 80px;
+	text-align: center;
+	font-size: 0.15rem;
+	background-color: #fff;
+	color: #aaa;
+}
+ .message-now{
+ 	position: absolute;
+	top: -12px;
+	left: 50%;
+	margin-left: -90px;
+	width: 180px;
+	text-align: center;
+	font-size: 0.15rem;
+	background-color: #fff;
+	color: #2399f1;
+ }
+
+.plus{
+	display: inline-block;
+	margin-top: 20px;
+	margin-left: 20px;
+	width: 14px;
+	height: 15px;
+	background: url(images/day12-15.png) -10px -248px;
+}
+
+.dialog span{
+	display: inline-block;
+	border-radius: 10px 0 0 10px;
+	border: 1px solid #dfe3e9;
+	margin-right: -5px;
+	margin-left: 40px;
+	width: 55px;
+	height: 55px;
+	background-color: #fafbfc;
+}
+
+.dialog input{
+	border: 1px solid #dfe3e9;
+	width: 80%;
+	height: 53px;
+	outline: none;
+	vertical-align: top;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
