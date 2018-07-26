@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+</head>
+<body>        
+    <input id="first-number" type="number" value="0" placeholder="第一个数字">
+    <input id="second-number" type="number" value="0" placeholder="第二个数字">
+    <button id="add-btn">加</button>
+    <button id="minus-btn">减</button>
+    <button id="times-btn">乘</button>
+    <button id="divide-btn">除</button>
+    <p id="result">运算结果</p>
+    <script>
+        var addBtn = document.getElementById("add-btn");
+        var minusBtn = document.getElementById("minus-btn");
+        var timesBtn = document.getElementById("times-btn");
+        var divideBtn = document.getElementById("divide-btn");
+        var firstNumber = document.getElementById("first-number");
+        var secondNumber = document.getElementById("second-number");
+        var result = document.getElementById("result");
+
+        addBtn.onclick = function(){
+            result.innerHTML = (parseFloat(firstNumber.value) + parseFloat(secondNumber.value)).toFixed(1);
+        }
+
+        minusBtn.onclick = function(){
+            result.innerHTML = (parseFloat(firstNumber.value) - parseFloat(secondNumber.value)).toFixed(1);
+        }
+
+        timesBtn.onclick = function(){
+            result.innerHTML = (parseFloat(firstNumber.value) * parseFloat(secondNumber.value)).toFixed(1);
+        }
+
+        divideBtn.onclick = function(){
+            result.innerHTML = (parseFloat(firstNumber.value) / parseFloat(secondNumber.value)).toFixed(1);
+        }
+
+    </script>
+</body>
+</html>
