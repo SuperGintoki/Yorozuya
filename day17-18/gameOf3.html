@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+    	<meta charset="UTF-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+    	<title>关于3的小游戏</title>
+    	<style>
+    		#container{
+    			word-break: break-all;
+    			width: 600px;
+    			margin: 20px auto;
+    		}
+    	</style>
+    </head>
+    <body>
+    	<div id="container"></div>
+    	
+    	<script>
+    		var wrapper = document.getElementById("container");
+    		for(var i = 1; i < 101; i++){
+    			if(i % 3 == 0 || i.toString().indexOf("3") > 0){
+    				console.log("PA");
+    				wrapper.innerHTML += "PA," + " ";
+    			}else{
+    				console.log(i);
+    				wrapper.innerHTML += i + ","+ " ";
+    			}
+    		}
+    	</script>
+    </body>
+</html>

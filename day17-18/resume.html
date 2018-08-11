@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<meta charset="UTF-8">
+    	<title>简历</title>
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<link rel="stylesheet" href="css/style_1.css">
+    	<style>
+    	    #hide{
+    	    	text-align: center;
+    	    	color: red;
+    	    	cursor: pointer;
+    	    }
+        </style>
+        <script>
+        	window.onload = function(){
+                var time = new Date().getHours();
+                if(time > 20){
+                	alert("少年，晚上好！")
+                }else if(time >10){
+                	alert("午安！")
+                }else{
+                	alert("早安，喵喵喵~")
+                }
+
+        		document.getElementById("hide").onclick = function(){
+        			console.log("%c前方高能！！！", "font-size: 40px; color: red;")
+        			console.log("%c" ,"padding: 300px 300px; background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1532597471412&di=1e75c5bf7f23adecc56834c4e035ae89&imgtype=0&src=http%3A%2F%2Fs9.rr.itc.cn%2Fr%2FwapChange%2F20173_15_9%2Fa5s87y77045018766405.jpg)");
+        		}
+        	}
+        </script>
+    </head>
+    <body>
+    	<div class="wrap">
+    		<div id="style">
+    			<span class="style1"></span>
+    			<span class="style2"></span>
+    			<span class="style3"></span>
+    		</div>
+	    	<div class="header">简历</div>
+	    	<p id="hide">少年，你渴望力量吗？さ，click here!</p>
+	    	<div class="main">
+	    		<div class="info">
+	    			<h2>基本信息</h2>
+	    			<div class="table">
+		    			<span class="label">姓名</span>
+		    			<span class="content">张三</span>
+		    			<span class="label">性别</span>
+		    		    <span class="content">男</span>
+		    			<span class="label">应聘职位</span>
+		    		    <span class="content">前端工程师</span>
+	    		    </div>
+	    		</div>
+	    		<div class="contact">
+	    			<h2>联系方式</h2>
+	    			<div class="table">
+		    			<span class="label">手机</span>
+		    		    <span class="content">12233344567</span>
+		    			<span class="label">邮箱</span>
+		    		    <span class="content">1234@qq.com</span>
+		    			<span class="label">个人主页</span>
+		    			<span class="content"><a href="">GAYHUB</a></span>
+		    		</div>
+	    		</div>
+	    		<div class="skill">
+	    			<h2>能力描述</h2>
+	    			<div class="table">
+	    				<div>
+			    			<span class="label">技术能力</span>
+			    			<span class="content1">熟练掌握HTML，CSS， JAVSCRIPT</span>
+		    		    </div>
+		    		    <div>
+			    			<span class="label">综合能力</span>
+			    			<span class="content1">良好的沟通，主动积极，努力勤奋，帅</span>
+		    		    </div>
+	    		    </div>
+	    		</div>
+	    		<div class="education">
+	    			<h2>教育经历</h2>
+	    			<div class="table">
+	    				<div>
+			    			<span class="label">本科</span>
+			    			<span class="content1">百度前端技术学院小微学院</span>
+		    		    </div>
+		    		    <div>
+			    			<span class="label">研究生</span>
+			    			<span class="content1">百度前端技术学院中二病学院</span>
+		    		    </div>
+	    		    </div>
+	    		</div>
+	    		<div class="project">
+	    			<h2>项目经历</h2>
+	    			<div class="table">
+	    				<div>
+			    			<span class="label">项目一</span>
+			    			<span class="content1">作为前端工程师参与了ABC组件的开发</span>
+		    		    </div>
+		    		    <div>
+			    			<span class="label">项目二</span>
+			    			<span class="content1">作为文档工程师参与了SAN Doc的编写</span>
+		    		    </div>
+	    		    </div>
+	    		</div>
+	    	</div>
+	    </div>
+	    <script src="changeStyle.js"></script>
+    </body>
+	
+</html>
+
+
+
+
+
+

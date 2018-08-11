@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Comaptible" content="IE-edge">
+		<title>十进制转化为二进制</title>
+	</head>
+	<body>
+		<input id="dec-number" type="number" placeholder="输入一个十进制的非负整数">
+		<input id="bin-bit" type="number" placeholder="输入转化后二进制数字的位数">
+		<button id="trans-btn">转化为二进制</button>
+		<p id="result">转化结果</p>
+
+		<script>
+			var decNumber = document.getElementById("dec-number");
+			var binBit = document.getElementById("bin-bit");
+			var transBtn = document.getElementById("trans-btn");
+			var result = document.getElementById("result");
+			/*创建数组以容纳余数（即转换后的二进制数）*/
+			var arrBinary = [];
+            
+            transBtn.onclick = function(){
+
+            	/*获取输入的非负整数*/
+            	var decimalism = parseInt(decNumber.value);
+
+            	/*获取bit输入框中的位数*/
+            	var bits = parseInt(binBit.value);
+
+            	/*创建新数组以容纳自动补足的0*/
+            	var arrAdd = [];
+
+                /*判断输入的数是否为数字*/
+                if(typeof decimalism === "number" && decimalism % 1 === 0 ){
+
+                	/*判断此数字是否为正整数*/
+                	if(Math.round(decimalism) === decimalism && decimalism >= 0){
+             
+                		if(decimalism === 0){
+                			/*当输入的位数和0本身的位数相等时*/
+                			if(bits === 1){
+                				result.innerHTML = "0";
+
+                				/*当输入的位数大于0本身位数时*/
+                			}else{
+                				for(var i = 0; i < bits-1; i++){
+                					arrAdd.push(0);
+                				}
+                				result.innerHTML = arrAdd +"," + 0;
+                			} 
+		                	
+		                }else{
+			                /*控制循环变量*/
+			            	for(var i = decimalism; i> 0; i = Math.floor(i / 2)){
+
+			            		/*获取除以2后得到的余数*/
+			            		var remainder = decimalism % 2;
+
+			            		/*将输入的非负整数进行除以2操作*/
+			            		decimalism = Math.floor(decimalism / 2);
+
+			            		/*将余数存入数组*/
+			            		arrBinary.push(remainder);
+			            		console.log(remainder);
+			                }
+                            
+                            /*调整余数数组使之成为二进制数组*/
+			                var transBin = arrBinary.reverse();
+                            
+                            /*当二进制位数和输入的位数相等时*/
+			                if(transBin.length == bits){
+			                	result.innerHTML = transBin;
+
+			                /*当二进制位数大于输入的位数时*/	
+			                }else if(transBin.length > bits){
+			                	result.innerHTML = transBin;
+                                console.log("您输入的二进制位数不够！");
+
+                            /*当二进制位数小于输入的位数时*/
+			                }else if(transBin.length < bits){
+                                for(var i = 0; i < (bits - transBin.length); i++){
+                                	arrAdd.push(0);
+                                }
+			                	result.innerHTML = arrAdd +"," + transBin;
+			                	/*清空数组，留作下一次使用*/
+			                    arrBinary = [];
+			                }
+
+                        
+  
+
+
+
+		                }
+                	}
+                }
+            }
+
+		</script>
+	</body>
+</html>
+
+
+
+

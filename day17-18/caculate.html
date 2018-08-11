@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE-edge">
+		<title>第十七天到十八天：如果可以重来</title>
+	</head>
+	<body>
+		<input id="first-number" type="number" value="0" placeholder="第一个数字">
+		<input id="second-number" type="number" value="0" placeholder="第二个数字">
+		<button id="add-btn">加</button>
+		<button id="minus-btn">减</button>
+		<button id="times-btn">乘</button>
+		<button id="divide-btn">除</button>
+		<p id="result">运算结果</p>
+
+		<script>
+			var firstNumber = document.getElementById("first-number");
+			var secondNumber = document.getElementById("second-number");
+			var addBtn = document.getElementById("add-btn");
+			var minusBtn = document.getElementById("minus-btn");
+			var timesBtn = document.getElementById("times-btn");
+			var divideBtn = document.getElementById("divide-btn");
+			var result = document.getElementById("result");
+			var i = 0;
+
+			var calculate = function(operator){
+				var first = parseFloat(firstNumber.value);
+		        var second = parseFloat(secondNumber.value);
+				if(isNaN(first) || isNaN(second)){
+					console.log("大胸dei，请输入正确的数字！");
+			    }else{
+			    	if(operator == 1){
+			    		result.innerHTML = first  + second;
+			    	}else if(operator == 2){
+			    		result.innerHTML = first  - second;
+			    	}else if(operator == 3){
+			    		result.innerHTML = first  * second;
+			    	}else{
+			    		if(second == 0){
+			    			console.log("你家的除数可以是0？")
+			    		}else{
+			    			result.innerHTML = first  / second;
+			    		}
+			    	}			        
+		        }
+			}
+
+			/*add*/
+			addBtn.onclick = function(){
+				calculate("1");
+			};
+
+			/*minus*/
+			minusBtn.onclick = function(){
+				calculate("2");
+			};
+
+			/*times*/
+			timesBtn.onclick = function(){
+				calculate("3");
+			};
+
+			/*divide*/
+			divideBtn.onclick = function(){
+				calculate("4");
+			};
+			
+		</script>	
+	</body>
+</html>
