@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+    	<meta charset="UTF-8">
+    	<meta http-equiv="U-XA-Compatible" content="IE-edge">
+    	<title>第十九天：找到那个DOM</title>
+    </head>
+    <body>
+    	<div id="wrapper">
+    		<div id="news-top" class="section">
+    			<h3>Some title</h3>
+    			<div class="content">
+    				<ul>
+    					<li><span>HTML</span><a href="">Some Link1</a></li>
+    					<li><span>JS</span><a class="active" href="">Some Link2</a></li>
+    					<li><span>CSS</span><a href="">Some Link3</a></li>
+    					<li><span>JS</span><a href="">Some Link4</a></li>
+    				</ul>
+    			</div>
+    			<img src="">
+    			<p class="">Some Text</p>
+    		</div>
+    		<div id="news-normal" class="section">
+    			<h3>Some Title</h3>
+    			<div class="content">
+    				<ul>
+    					<li><span>HTML</span><a href="">Some Link1</a></li>
+    					<li><span>HTML</span><a href="">Some Link2</a></li>
+    					<li><span>JS</span><a class="active" href="#">Some Link3</a></li>
+    					<li><span>CSS</span><a href="">Some Link4</a></li>
+    				</ul>
+    			</div>
+    			<img src="">
+    			<p class="">Some Text</p>
+    		</div>
+    	</div>
+    	<script>
+    		//返回页面中所有li标签
+    		var aList = document.getElementsByTagName("li");
+    		getAllListItem();
+    		function getAllListItem(){
+    			for (var i = 0; i < aList.length; i++){
+    				console.log(aList[i]);
+    			}
+    		}
+
+    		//返回某个section下的所有span中内容为HTML的span标签
+    		findAllHtmlSpanInOneSection("news-normal")
+    		findAllHtmlSpanInOneSection("news-top");
+    		function findAllHtmlSpanInOneSection(sectionId){
+    			var section = document.getElementById(sectionId);
+    			var aList1 = section.getElementsByTagName("li");
+
+    	   			for(var i = 0; i < aList1.length; i++){
+
+    	   				var aSpan = aList1[i].getElementsByTagName("span");
+
+    				    for(var j = 0; j < aSpan.length; j++){
+
+	    				    if(aSpan[j].innerHTML === "HTML"){
+	    					console.log(aSpan[j]);
+
+    				        }
+    				    }
+    			    }
+    		}
+
+            // 返回某个section下，所有所包含span内容为spanCont的LI标签
+            findListItem("news-normal", "HTML");
+    		function findListItem(sectionId, spanCont) {
+    			var section = document.getElementById(sectionId);
+    			var aList1 = section.getElementsByTagName("li");
+
+    	   			for(var i = 0; i < aList1.length; i++){
+
+    	   				var aSpan = aList1[i].getElementsByTagName("span");
+
+    				    for(var j = 0; j < aSpan.length; j++){
+
+	    				    if(aSpan[j].innerHTML === spanCont){
+	    					console.log(aList1[i]);
+
+    				        }
+    				    }
+    			    }        
+            }
+
+            //返回某个section下，class为active的链接中包含的文字内容
+            getActiveLinkContent("news-top");
+            getActiveLinkContent("news-normal");
+            function getActiveLinkContent(sectionId){
+            	var section = document.getElementById(sectionId);
+    			var aList1 = section.getElementsByTagName("li");
+
+    			for(var i = 0; i < aList1.length; i++){
+
+    				var aA = aList1[i].getElementsByTagName("a");
+
+    				for (var j = 0; j < aA.length; j++){
+
+    					if(aA[j].className == "active"){
+    						console.log(aA[j].innerHTML);
+    					}
+    				}
+    			}
+
+
+
+            }
+
+
+
+
+    	</script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
