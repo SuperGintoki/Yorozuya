@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>事件委托</title>
+	</head>
+	<body>
+		<ul id="parentUl">
+			<li>我还是个孩子1</li>
+			<li>我还是个孩子2</li>
+			<li>我还是个孩子3</li>
+			<li>我还是个孩子4</li>
+			<li>我还是个孩子5</li>
+		</ul>
+		<script>
+			//以下方法增加了dom操作的次数，大大降低了性能
+			/*var ul = document.getElementById("parentUl");
+			var aLi = ul.getElementsByTagName("li");
+			showMe();
+			function showMe(){
+				for(var i = 0; i < aLi.length; i++){
+					aLi[i].onclick = function(){
+						console.log(this.innerHTML);
+					}
+				}
+
+			}           
+            addNewChild();
+			function addNewChild(){
+				var li = document.createElement("li");
+				li.innerHTML = "你好，我是你的新邻居老王。"
+				ul.appendChild(li);
+				showMe();
+			}*/
+
+			//升级版
+			var ul = document.getElementById("parentUl");
+			ul.onclick = function(event){
+				var e = event || window.event;
+				var source = e.target ||e.srcElement; //target表示在事件冒泡中触发事件的源元素，在IE中是e.srcElement;
+				if(source.nodeName.toLowerCase() == "li"){
+					console.log(source.innerHTML);
+				}
+			}
+
+			addNewChild();
+			function addNewChild(){
+				var li = document.createElement("li");
+				li.innerHTML = "你好，我是你的新邻居老王。"
+				ul.appendChild(li);
+			}
+
+
+
+
+
+		</script>
+	</body>
+</html>

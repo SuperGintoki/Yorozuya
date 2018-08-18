@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>事件捕获阶段</title>
+	</head>
+	<body>
+		<div class="box">
+			<button id="btn">Click Me!</button>
+		</div>
+		<script>
+			document.querySelector("#btn").addEventListener("click", function(){
+				console.log("Button was clicked");
+			}, true);
+	
+			document.querySelector(".box").addEventListener("click", function(){
+				console.log("Div.box was clicked");
+			}, true);
+
+			document.querySelector("body").addEventListener("click",function(){
+				console.log("Body was clicked");
+			},true);
+
+			document.addEventListener("click",function(){
+				console.log("Document was clicked");
+			},true);
+
+			window.addEventListener("click",function(){
+				console.log("Window was clicked");
+			},true);
+
+			
+
+			document.querySelector('#btn').addEventListener('click', function () {
+			    console.log("btn was clicked");
+			});
+
+			document.querySelector('body').addEventListener('click', function () {
+			    console.log("body was clicked");
+			});
+
+			document.querySelector('.box').addEventListener('click', function () {
+			    console.log("box was clicked");
+			});
+
+			document.addEventListener('click', function () {
+			    console.log("document was clicked");
+			});
+
+			window.addEventListener('click', function () {
+			    console.log("window was clicked");
+			});
+
+
+
+		</script>
+	</body>
+</html>

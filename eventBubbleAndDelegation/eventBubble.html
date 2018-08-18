@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>事件冒泡</title>
+		<style>
+			#parent{
+				background-color: #000;
+				height: 400px;
+				width: 400px;
+			}
+			#child{
+				background-color: #fff; 
+				height: 200px;
+				width: 200px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="parent" data-id="444">
+			<div id="child" data-id="555"></div>
+		</div>
+		<script>
+			/*document.getElementById('parent').onkeydown = function(){
+				console.log(this.getAttribute('data-id'));  //只有相关事件才会发生冒泡
+			};*/
+			document.getElementById('parent').onclick = function(){
+				console.log(this.getAttribute('data-id'));
+			};
+
+			document.getElementById('child').onclick = function(ev){
+				var e = ev || window.event; //IE中的event可以通过window.event随时取到
+				console.log(this.getAttribute('data-id'));
+
+				stopPropagation(e);
+			};
+
+			function stopPropagation(e){
+				if(e.stopPropagation){
+					e.stopPropagation();
+				}else{
+					e.cancelBubble = true;   //兼容IE的写法
+				}
+			}
+		</script>
+	</body>
+</html>
