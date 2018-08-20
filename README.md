@@ -23,5 +23,5 @@
 [demo](https://supergintoki.github.io/Yorozuya/day19/day19.html)
 </br>
 4.day20-21
-[demo](https://supergintoki.github.io/Yorozuya/day21-21/day20-21-3.html)
+[demo](https://supergintoki.github.io/Yorozuya/day20-21/day20-21-3.html)
 </br>
