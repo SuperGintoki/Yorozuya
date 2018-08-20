@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>setTimeout and setInterval</title>
+		<style>
+			#fade-obj{
+				width: 300px;
+				height: 300px;
+				background: #000;
+			}
+		</style>
+		<script>
+			window.onload = function(){
+				var fadeObj = document.getElementById("fade-obj");
+				var fadeBtn = document.getElementById("fade-btn");
+				var i = 10;
+				var timer = null;
+			    fadeBtn.onclick = function(){   
+				    if(fadeBtn.innerHTML === "淡出") {
+	                    timer = setInterval(fadeOut, 50);
+					    this.disabled = true;
+				    }else{
+				    	timer = setInterval(fadeIn, 50);
+					    this.disabled = true;
+				    }        
+				    
+				}
+
+				function fadeOut(){
+				 	i = i - 0.1;
+					fadeObj.style.opacity = i/10;
+					fadeObj.style.filter = "alpha(opacity = "+ i +")";
+					if(i < 0){
+						console.log(i);
+						clearInterval(timer);
+						fadeBtn.innerHTML = "淡入";
+						fadeBtn.disabled = false;
+					}				 	
+				}
+
+				function fadeIn(){
+					i = i + 0.1;
+					fadeObj.style.opacity = i/10;
+					fadeObj.style.filter = "alpha(opacity = "+ i +")";
+					if(i > 10){
+						clearInterval(timer);
+						fadeBtn.innerHTML = "淡出";
+						fadeBtn.disabled = false;
+					}
+				}
+
+
+
+
+			}
+		</script>
+	</head>
+	<body>
+		<div id="fade-obj"></div>
+		<button id="fade-btn">淡出</button>
+	</body>
+</html>

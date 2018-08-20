@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>雪碧图</title>
+		<style>
+			#div{
+				background: url(image/wrink.jpg) 0 0;
+				height: 480px;
+				width: 480px;
+				margin: 0 auto;
+			}
+		</style>
+		<script>
+			var x = 0;
+			var timer = setInterval(function(){
+				var myDiv = document.getElementById("div");
+				x += 480;
+				myDiv.style.backgroundPosition = "0 " + x + "px";
+			}, 200)
+
+		</script>
+	</head>
+	<body>
+		<div id="div"></div>
+	</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<title>控制元素的显示和隐藏</title>
+		<style>
+			select{
+				display: none;
+			}
+		</style>
+		<script>
+			window.onload = function(){
+				var schoolInput = document.getElementById("school");
+				var companyInput = document.getElementById("company");
+				var select = document.querySelectorAll("select");
+
+				schoolInput.onclick = function(){
+					select[0].style.display = "inline-block";
+					select[1].style.display = "none";
+				}
+
+				companyInput.onclick = function(){
+					select[0].style.display = "none";
+					select[1].style.display = "inline-block";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<label>
+			<input id="school" name="status" type="radio">
+			School
+		</label>
+		<label>
+			<input id="company" name="status" type="radio">
+			Company
+		</label>
+
+		<select id="school-select">
+			<option>北京邮电大学</option>
+			<option>黑龙江大学</option>
+			<option>华中科技大学</option>
+		</select>
+
+		<select id="company-select">
+			<option>百度</option>
+			<option>爱奇艺</option>
+		</select>
+	</body>
+</html>

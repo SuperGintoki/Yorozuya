@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE-edge">
+		<title>第二十到二十一天：让你喝页面对话</title>
+		<script>
+			window.onload = function(){
+				var submitBtn = document.querySelector("button");
+				var text = document.getElementById("name");
+
+				submitBtn.onclick =onputName;
+
+				function onputName(){
+					console.log(text.value);
+				}
+
+				document.onkeydown = keyPress; //坑：如果此处用onkeypress的话，则在Chrome中不会产生效果，因为chrome对功能性的按键不产生keypress事件；
+
+				function keyPress(e){
+                    var e = e || window.event;
+					if(e.keyCode == 13){
+					    onputName();
+				    }else if(e.keyCode == 27){
+				    	text.value = "";
+				    }
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input id="name" type="text">
+		<button id="submit-btn">Submit</button>
+	</body>
+</html>
