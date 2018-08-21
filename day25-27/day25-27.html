@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*function go(){
+				console.log("go");
+			}
+            GoSteps(true);
+            
+			function GoSteps(n){
+
+				var N = parseInt(n);
+				if(N > 0){
+					while (N --){
+					go();
+				    }
+				}
+			}*/
+
+			showTime();
+            setInterval(showTime, 1000);
+			function showTime(){
+				var date = new Date();
+				document.body.innerHTML = date.getFullYear() + " 年 " + p((date.getMonth() + 1)) + " 月 " + p(date.getDate()) + " 日 " + " 星期" + date.getDay() + " " + p(date.getHours()) + " : " + p(date.getMinutes()) + " : " + p(date.getSeconds());
+
+			}
+
+			function p(s){
+				if(s < 10){
+					return "0" + s;
+				}else{
+					return s;
+				}
+			}
+
+
+		</script>
+	</body>
+</html>
