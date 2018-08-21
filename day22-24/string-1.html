@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>string</title>
+	</head>
+	<body>
+		<script>
+			/*
+				实现一个字符串头尾去除空格的函数
+				注意需要去除的空格，包括全角、半角空格
+				暂时不需要学习和使用正则表达式的方式
+			*/
+			function diyTrim(str){
+				var start = 0,
+				    end = str.length - 1;
+				while(start <= end && str.charAt(start) == " "){
+					start ++;
+				};
+				while(start <= end && str.charAt(end) == " "){
+					end --;
+				}
+				return str.substring(start, end+1);
+			}
+
+			/*console.log(diyTrim(" a bc "));
+			console.log(diyTrim(' a f b    ')); // ->a f b
+			console.log(diyTrim('    ffdaf    ')); // ->ffdaf
+			console.log(diyTrim('1    ')); // ->1
+			console.log(diyTrim('　　f')); // ->f
+			console.log(diyTrim('  　  a f b 　　 ')); // ->a f b
+			console.log(diyTrim(' ')); // ->
+			console.log(diyTrim('　')); // ->
+			console.log(diyTrim(''));*/
+			console.log(removeRepetition("aabbc"));
+			console.log(removeRepetition("aaa")); // ->a
+			console.log(removeRepetition("abbba")); // ->aba
+			console.log(removeRepetition("aabbaabb")); // ->abab
+			console.log(removeRepetition("")); // ->
+			console.log(removeRepetition("abc")); // ->abc
+
+			function removeRepetition(str){
+				var arr = str.split("");
+				for(var i = 0; i < arr.length; i++){
+					if(arr[i] === arr[i+1]){
+						arr.splice(i, 1);
+						i --;
+					}
+				}
+				return arr.join("");
+			}
+			
+		</script>
+		
+	</body>
+</html>
