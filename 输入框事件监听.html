@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>输入框的事件监听</title>
+</head>
+<body>
+	<input type="text" id="username">
+    <script>
+    	var username = document.getElementById("username");
+    	var result = [];
+    	/*var counter = 0;*/
+
+    	/*setInterval(function(){
+    		username.setAttribute("value", counter++);
+    	},1000);
+    	username.addEventListener("change", function(){
+    		console.debug("change", this.value);
+    	})
+    	username.addEventListener("focus", function(){
+    		console.debug("focus", this.value);
+    	})
+    	username.addEventListener("blur", function(){
+    		console.debug("blur", this.value);
+    	})
+    	var observer = new MutationObserver(function(){
+    		console.debug(username.value);
+    	});
+    	observer.observe(username,{
+    		attributes: true,
+    		attributeOldValue: false,
+    		attributeFilter: ['value'],
+    		characterData: true,
+    		characterDataOldValue: true
+    	});*/
+
+
+    	//注册input事件
+    	username.addEventListener("input", function(event){
+    		result.push({
+    			event: 'input',
+    			value: this.value,
+    			keyCode: event.keyCode
+    		});
+    		/*return result;*/
+    	})
+    	//注册keydown事件
+    	username.addEventListener("keydown", function(event){
+    		result.push({
+    			event: 'keydown',
+    			value: this.value,
+    			keyCode: event.keyCode
+    		})
+    		/*console.table(result);*/
+    	})
+    	//注册keyup事件
+    	username.addEventListener("keyup", function(event){
+    		result.push({
+    			event: 'keyup',
+    			value: this.value,
+    			keyCode: event.keyCode
+    		})
+    	})
+    	//注册change事件
+    	username.addEventListener("change", function(){
+    		result.push({
+    			event: 'change',
+    			value: this.value,
+    			keyCode: event.keyCode
+    		})
+    		console.table(result);
+    	})
+    	//注册blur事件
+    	username.addEventListener("blur", function(){
+    		result.push({
+    			event: 'blur',
+    			value: this.value,
+    			keyCode: event.keyCode
+    		});
+    		console.table(result);
+    	})
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
